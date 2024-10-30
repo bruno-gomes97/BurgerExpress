@@ -1,0 +1,13 @@
+#navbar {
+    background-color: #ffde59;
+}
+
+.logo {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 50%;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
