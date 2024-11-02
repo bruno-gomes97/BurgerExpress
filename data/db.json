@@ -37,7 +37,7 @@
         "nome": "Coca cola 350ml",
         "descricao": "",
         "preco": 5.99,
-        "image": "./burguer_simples.jpg",
+        "image": "./coca-lata.jpg",
         "categoria_id": 2
       },
       {
@@ -45,7 +45,7 @@
         "nome": "Coca cola 600ml",
         "descricao": "",
         "preco": 7.99,
-        "image": "./burguer_simples.jpg",
+        "image": "./coca-litro.jpg",
         "categoria_id": 2
       }
     ],

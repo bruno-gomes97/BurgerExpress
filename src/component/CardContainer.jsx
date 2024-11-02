@@ -39,6 +39,28 @@ const CardContainer = ({ url }) => {
         })
     }
 
+    // Incrementar quantidade
+    const handleIncrementQuantity = (itemId) => {
+        setCart((prevCart) =>
+            prevCart.map(item => 
+                item.id === itemId 
+                ? { ...item, quantity: item.quantity + 1 }
+                : item
+            )
+        );
+    }
+
+    // Decremento
+    const handleDecrementQuantity = (itemId) => {
+        setCart((prevCart) =>
+            prevCart.map(item =>
+                item.id === itemId && item.quantity > 1 
+                ? {...item, quantity: item.quantity - 1}
+                : item
+            )
+        )
+    }
+
     const handleFinalizeOrder = () => {
         alert("Pedido finalizado com sucesso!")
         setCart([])
@@ -75,9 +97,11 @@ const CardContainer = ({ url }) => {
             <CartOffcanvas show={show}
                 handleClose={handleClose}
                 cart={cart}
-                handleFinalizeOrder={handleFinalizeOrder} />
-
-
+                handleFinalizeOrder={handleFinalizeOrder} 
+                handleIncrementQuantity={handleIncrementQuantity}
+                handleDecrementQuantity={handleDecrementQuantity}
+                />
+                
         </div>
     )
 }
